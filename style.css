@@ -486,6 +486,40 @@ article .icon {
   height: 90%;
 }
 
+.repo-preview {
+  width: 100%;
+  min-height: 22rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.9rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #111827, #1f2937 55%, #0f766e);
+  color: white;
+  text-align: left;
+}
+
+.repo-preview__badge {
+  width: fit-content;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  color: #d1fae5;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.repo-preview h3 {
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+.repo-preview p {
+  max-width: 28rem;
+  color: #d1d5db;
+  line-height: 1.5;
+}
+
 .project-title {
   margin: 1rem;
   color: black;

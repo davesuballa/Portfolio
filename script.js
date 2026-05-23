@@ -82,6 +82,17 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const projects = [
     {
+      title: "Recycle App",
+      imgSrc: "./assets/project-0.png",
+      githubUrl: "https://github.com/davesuballa/recycle",
+    },
+    {
+      title: "Microservices V2",
+      repoName: "davesuballa/MicroservicesV2",
+      description: "Microservices project sample from my GitHub portfolio.",
+      githubUrl: "https://github.com/davesuballa/MicroservicesV2",
+    },
+    {
       title: "Workout Application",
       imgSrc: "./assets/workoutapp.png",
       githubUrl: "https://github.com/davesuballa/WorkoutAPP",
@@ -131,11 +142,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const projectContainer = document.getElementById("project-container");
 
+  function getProjectVisual(project) {
+    if (project.imgSrc) {
+      return `
+        <img src="${project.imgSrc}" alt="${project.title}" class="project-img" />
+      `;
+    }
+
+    return `
+      <div class="repo-preview" aria-label="${project.title} repository preview">
+        <div class="repo-preview__badge">GitHub Repository</div>
+        <h3>${project.repoName}</h3>
+        <p>${project.description}</p>
+      </div>
+    `;
+  }
+
   projects.forEach((project) => {
     const projectHTML = `
       <div class="details-container color-container">
         <div class="article-container">
-          <img src="${project.imgSrc}" alt="${project.title}" class="project-img" />
+          ${getProjectVisual(project)}
         </div>
         <h2 class="experience-sub-title project-title">${project.title}</h2>
         <div class="btn-container">
