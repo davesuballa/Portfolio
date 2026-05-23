@@ -83,13 +83,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const projects = [
     {
       title: "Recycle App",
-      imgSrc: "./assets/project-0.png",
+      imgSrc: "./assets/recycle-app-generated.png",
       githubUrl: "https://github.com/davesuballa/recycle",
     },
     {
       title: "Microservices V2",
-      repoName: "davesuballa/MicroservicesV2",
-      description: "Microservices project sample from my GitHub portfolio.",
+      imgSrc: "./assets/microservices-v2-generated.png",
       githubUrl: "https://github.com/davesuballa/MicroservicesV2",
     },
     {
