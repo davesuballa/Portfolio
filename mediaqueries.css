@@ -1,16 +1,4 @@
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 2rem;
-    margin-top: 6rem;
-  }
-
-  .about-containers {
-    flex-wrap: wrap;
-  }
-}
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1100px) {
   #desktop-nav {
     display: none;
   }
@@ -19,211 +7,96 @@
     display: flex;
   }
 
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
+  .hero-section,
+  .about-grid,
+  #job_experience {
+    grid-template-columns: 1fr;
   }
 
-  #profile,
-  .section-container {
-    display: block;
+  .hero-section {
+    min-height: auto;
+    padding-top: 42px;
   }
 
-  .arrow {
-    display: none;
+  .hero-panel {
+    max-width: 620px;
   }
 
-  section,
-  .section-container {
-    height: fit-content;
+  #job_name {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .site-header {
+    padding: 12px 14px;
   }
 
   section {
-    margin: 0 10%;
+    width: min(100% - 28px, var(--container));
+    padding: 68px 0;
   }
 
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
+  .hero-copy h1 {
+    font-size: clamp(2.8rem, 16vw, 4.5rem);
   }
 
-  .about-containers {
-    margin-top: 25px;
+  .hero-lead {
+    font-size: 1rem;
   }
 
-  .about-containers p {
-    padding-top: 0;
-  }
-
-  #job_experience {
-    display: contents;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 400px;
-  }
-
-  #job_experience #content {
-    display: flex;
-    height: 18rem;
-    width: 96%;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-  }
-
-  #job_experience #job_name {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-  }
-
-  #projects .about-containers {
-    display: grid;
+  .hero-metrics,
+  .about-containers,
+  #projects .about-containers,
+  #job_name {
     grid-template-columns: 1fr;
   }
-}
 
-@media screen and (max-width: 900px) {
-  #profile {
-    height: 60vh;
-    margin-bottom: 2rem;
-    margin-top: 10rem;
+  .profile-card {
+    grid-template-columns: 78px 1fr;
+    padding: 14px;
   }
 
-  #job_experience #content {
-    height: 18rem;
-  }
-}
-
-@media screen and (max-width: 600px) {
-
-  #contact,
-  footer {
-    height: 40vh;
+  .profile-avatar {
+    width: 78px;
+    height: 78px;
+    border-radius: 18px;
   }
 
-  #profile {
-    height: 83vh;
-    margin: 4rem 0;
-    margin-bottom: 0;
-  }
-
-  article {
-    font-size: 1rem;
-  }
-
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
-    flex-wrap: wrap;
-  }
-
-  .contact-info-container {
-    margin: 0;
-  }
-
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
-
-  #hamburger-nav .logo {
-    font-size: 1.5rem;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
-  }
-
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
-  }
-
-  .section__text__p2 {
-    font-size: 1.25rem;
-  }
-
-  .title {
+  .section-heading h2,
+  .contact-card h2 {
     font-size: 2rem;
   }
 
-  .text-container {
-    text-align: justify;
+  .text-container,
+  .details-container,
+  #content,
+  .contact-card {
+    padding: 22px;
   }
 
-  #experience,
-  .experience-details-container {
-    margin-top: 0;
+  .slider {
+    height: 112px;
   }
 
-  #job_experience button {
-    margin-bottom: 10px;
-    padding: 10px 30px 10px 10px;
+  .contact-info-container {
+    width: 100%;
+    justify-content: center;
   }
-
-  #job_experience #content {
-    display: flex;
-    height: 20rem;
-    width: 96%;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-  }
-
-  .about-containers {
-    display: inline;
-    gap: 1rem;
-  }
-
-  .contact-info-upper-container {
-    gap: 1rem;
-  }
-
-  .details-container {
-    margin-bottom: 30px;
-  }
-
-  #job_experience #content {
-    width: 93%;
-    margin-bottom: 80px;
-  }
-
 }
 
-@media screen and (max-width: 400px) {
-  #profile {
-    height: 55vh;
-    margin: 10rem 0;
-    margin-bottom: 0;
+@media screen and (max-width: 460px) {
+  .btn,
+  .hero-actions .btn {
+    width: 100%;
   }
 
-  #job_experience #content {
-    height: 35rem;
-    width: 88%;
+  .hero-panel {
+    padding: 16px;
+    border-radius: 24px;
   }
 
-  .about-details-container {
-    margin-top: 80px;
+  .project-content {
+    padding: 18px;
   }
-
-  #projects .about-containers {
-    gap: 1rem;
-  }
-
 }

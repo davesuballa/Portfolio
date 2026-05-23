@@ -5,15 +5,18 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Christian Dave R. Suballa, a mobile and web developer focused on apps, APIs, and practical software projects." />
+  <title>Christian Dave Suballa | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mediaqueries.css" />
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </head>
 
 <body>
-  <nav id="desktop-nav">
-    <div class="nav-background">
+  <header class="site-header">
+    <nav id="desktop-nav" aria-label="Primary navigation">
+      <a class="brand" href="#profile">CDS</a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -21,169 +24,203 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-    </div>
-  </nav>
+    </nav>
 
-  <nav id="hamburger-nav">
-    <div class="logo">Portfolio</div>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="menu-links">
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-      </div>
-    </div>
-  </nav>
-
-  <section id="profile">
-    <div class="section__text">
-      <p class="section__text__p1">Hello, I'm</p>
-      <h1 class="title">Christian Dave R. Suballa</h1>
-      <p class="section__text__p2">Informatics'26 | Freelancer-Programming</p>
-      <div class="btn-container">
-        <button class="btn btn-color-2" onclick="window.open('./assets/CV-Dave.pdf')">
-          Download CV
+    <nav id="hamburger-nav" aria-label="Mobile navigation">
+      <a class="brand" href="#profile">CDS</a>
+      <div class="hamburger-menu">
+        <button class="hamburger-icon" type="button" onclick="toggleMenu()" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
-        <button class="btn btn-color-1"   onclick="location.href= 'https://www.facebook.com/luckyboy26/'" >
-          Contact Me on Facebook!
-        </button>
-      </div>
-      <div id="socials-container">
-        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
-          onclick="location.href='https://linkedin.com/in/christian-dave-suballa-686286317/'" />
-        <img src="./assets/github.png" alt="My Github profile" class="icon"
-          onclick="location.href='https://github.com/davesuballa'" />
-      </div>
-    </div> 
-  </section>
-
-  <section id="about">
-    <p class="section__text__p1">Get To Know More</p>
-    <h1 class="title">About Me</h1>
-    <div class="section-container">
-      <div class="section__pic-container">
-        <img src="./assets/about-pic.jpg" alt="Profile picture" class="about-pic" />
-      </div>
-      <div class="about-details-container">
-        <div class="text-container">
-          <p>
-            I am currently an IT student at Informatics College Manila having a deep love for application and web development. During my work in the studied courses and personal initiatives, I have a good knowledge of Java, Kotlin, C#, and Python. I also work with API, Front-End such as Html and CSS, and Databases such as MySQL and Firebase.
-
-            I have been able to develop several applications which has given me a chance to sharpen my problem solving skills as well creativity in making effective application that can operates optimally. Apart from it exposed I also have working experience in other field besides IT for instance I worked as an encoder in data entry. I have therefore gained better attitude and focus on details and have also improved my organizational skills.
-
-            I am now in a search for positions where I can utilize technical skills, allied a dynamic friendly team, and advance my development career in the tech realm.” </p>
-        </div>
-        <div class="about-containers">
-          <div class="details-container">
-            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-            <h3>Awards</h3>
-            <ul>
-              <li>Cum Laude</li>
-              <li> Dean's Lister</li>
-            </ul>
-          </div>
-          <div class="details-container">
-            <img src="./assets/education.png" alt="Education icon" class="icon" />
-            <h3>Education</h3>
-                       <p>B.Sc. Bachelors Degree</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#skills'" />
-  </section>
-
-  <section id="skills">
-    <p class="section__text__p1">Explore My Technical</p>
-    <h1 class="title">Skills</h1>
-    <br><br>
-    <div class="slider">
-      <ul class="brands">
-        <li class="brand-logo"><iconify-icon icon="logos:html-5" width="60" height="60"></iconify-icon></li>
-        <li class="brand-logo"><iconify-icon icon="logos:css-3" width="60" height="60"></iconify-icon></li>
-        <li class="brand-logo"><iconify-icon icon="vscode-icons:file-type-js-official" width="60" height="60"></iconify-icon></li>
-        <li class="brand-logo"><iconify-icon icon="logos:java" width="60" height="60"></iconify-icon></li>
-        <li class="brand-logo"><iconify-icon icon="devicon:php" width="60" height="60"></iconify-icon></li>
-        <li class="brand-logo"><iconify-icon icon="logos:python" width="60" height="60"></iconify-icon></li>
-        <li class="brand-logo"><iconify-icon icon="logos:mysql" width="60" height="60"></iconify-icon></li>
-        <li class="brand-logo"><iconify-icon icon="logos:git" width="60" height="60"></iconify-icon></li>
-        <li class="brand-logo"><iconify-icon icon="logos:firebase" width="60" height="60"></iconify-icon></li>
-        <li class="brand-logo"><iconify-icon icon="logos:xampp" width="60" height="60"></iconify-icon></li>
-        <li class="brand-logo"><iconify-icon icon="skill-icons:bootstrap" width="60" height="60"></iconify-icon></li>
-        <li class="brand-logo"><iconify-icon icon="devicon:github" width="60" height="60"></iconify-icon></li>
-        <li class="brand-logo"><iconify-icon icon="logos:kotlin" width="60" height="60"></iconify-icon></iconify-icon>
-        </li>
-      </ul>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
-  </section>
-
-  <section id="experience">
-    <p class="section__text__p1">Explore My</p>
-    <h1 class="title">Experience</h1>
-    <br><br>
-    <div class="experience-details-container">
-      <div id="job_experience">
-        <div id="job_name">
-          <button id="buttonOne" class="active"></button>
-          <button id="buttonTwo"></button>
-          <button id="buttonThree"></button>
-        </div>
-        <div id="content">
-          <div id="contentOne"></div>
-          <div id="contentTwo"></div>
-          <div id="contentThree"></div>
-        </div>
-        
-      </div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
-  </section>
-
-  <section id="projects">
-    <p class="section__text__p1">Browse My Recent</p>
-    <h1 class="title">Projects</h1>
-    <div class="experience-details-container">
-      <div class="about-containers" id="project-container"></div>
-    </div>
-  
-
-  <section id="contact">
-    <p class="section__text__p1">Get in Touch</p>
-    <h1 class="title">Contact Me</h1>
-    <div class="contact-info-upper-container">
-      <div class="contact-info-container">
-        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-        <p><a href="mailto:examplemail@gmail.com">davidsuballa@gmail.com</a></p>
-      </div>
-      <div class="contact-info-container">
-        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-        <p><a href="https://www.linkedin.com/in/christian-dave-suballa-686286317/">LinkedIn</a></p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <nav>
-      <div class="nav-links-container">
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <ul class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </ul>
       </div>
     </nav>
-    <p>Copyright &#169; 2024 Christian Dave. All Rights Reserved.</p>
+  </header>
+
+  <main>
+    <section id="profile" class="hero-section">
+      <div class="hero-copy">
+        <p class="eyebrow">Informatics '26 | Freelance Programmer</p>
+        <h1>Christian Dave R. Suballa</h1>
+        <p class="hero-lead">
+          I build mobile apps, web systems, APIs, and student/business software projects with practical,
+          user-focused workflows.
+        </p>
+        <div class="btn-container hero-actions">
+          <button class="btn btn-color-1" onclick="location.href='#projects'">
+            View Projects
+          </button>
+          <button class="btn btn-color-2" onclick="window.open('./assets/CV-Dave.pdf')">
+            Download CV
+          </button>
+        </div>
+        <div id="socials-container" aria-label="Social links">
+          <button class="social-btn" type="button"
+            onclick="location.href='https://linkedin.com/in/christian-dave-suballa-686286317/'"
+            aria-label="LinkedIn profile">
+            <img src="./assets/linkedin.png" alt="" class="icon" />
+          </button>
+          <button class="social-btn" type="button" onclick="location.href='https://github.com/davesuballa'"
+            aria-label="GitHub profile">
+            <img src="./assets/github.png" alt="" class="icon" />
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-panel" aria-label="Developer summary">
+        <div class="profile-card">
+          <img src="./assets/about-pic.jpg" alt="Christian Dave R. Suballa" class="profile-avatar" />
+          <div>
+            <p class="profile-label">Available for</p>
+            <h2>Mobile and Web Projects</h2>
+          </div>
+        </div>
+        <div class="hero-metrics">
+          <div>
+            <strong>10+</strong>
+            <span>Project samples</span>
+          </div>
+          <div>
+            <strong>Full-stack</strong>
+            <span>Apps, APIs, databases</span>
+          </div>
+        </div>
+        <div class="stack-chips">
+          <span>React Native</span>
+          <span>Firebase</span>
+          <span>.NET API</span>
+          <span>MySQL</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow">About</p>
+        <h2>Developer with a practical app-building mindset.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="text-container">
+          <p>
+            I am an IT student at Informatics College Manila with a strong interest in application and web development.
+            My work covers Java, Kotlin, C#, Python, HTML, CSS, APIs, MySQL, and Firebase.
+          </p>
+          <p>
+            I have built mobile applications, websites, and database-backed systems for student and business projects.
+            My background in data entry also strengthened my attention to detail, organization, and reliability.
+          </p>
+        </div>
+        <div class="about-containers">
+          <article class="details-container">
+            <img src="./assets/experience.png" alt="" class="icon" />
+            <h3>Awards</h3>
+            <ul>
+              <li>Cum Laude</li>
+              <li>Dean's Lister</li>
+            </ul>
+          </article>
+          <article class="details-container">
+            <img src="./assets/education.png" alt="" class="icon" />
+            <h3>Education</h3>
+            <p>B.Sc. Bachelor's Degree</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="content-section">
+      <div class="section-heading centered">
+        <p class="eyebrow">Skills</p>
+        <h2>Tools and technologies I use.</h2>
+      </div>
+      <div class="slider" aria-label="Technology logos">
+        <ul class="brands">
+          <li class="brand-logo"><iconify-icon icon="logos:html-5" width="60" height="60"></iconify-icon></li>
+          <li class="brand-logo"><iconify-icon icon="logos:css-3" width="60" height="60"></iconify-icon></li>
+          <li class="brand-logo"><iconify-icon icon="vscode-icons:file-type-js-official" width="60"
+              height="60"></iconify-icon></li>
+          <li class="brand-logo"><iconify-icon icon="logos:java" width="60" height="60"></iconify-icon></li>
+          <li class="brand-logo"><iconify-icon icon="devicon:php" width="60" height="60"></iconify-icon></li>
+          <li class="brand-logo"><iconify-icon icon="logos:python" width="60" height="60"></iconify-icon></li>
+          <li class="brand-logo"><iconify-icon icon="logos:mysql" width="60" height="60"></iconify-icon></li>
+          <li class="brand-logo"><iconify-icon icon="logos:git" width="60" height="60"></iconify-icon></li>
+          <li class="brand-logo"><iconify-icon icon="logos:firebase" width="60" height="60"></iconify-icon></li>
+          <li class="brand-logo"><iconify-icon icon="logos:xampp" width="60" height="60"></iconify-icon></li>
+          <li class="brand-logo"><iconify-icon icon="skill-icons:bootstrap" width="60" height="60"></iconify-icon></li>
+          <li class="brand-logo"><iconify-icon icon="devicon:github" width="60" height="60"></iconify-icon></li>
+          <li class="brand-logo"><iconify-icon icon="logos:kotlin" width="60" height="60"></iconify-icon></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="experience" class="content-section">
+      <div class="section-heading">
+        <p class="eyebrow">Experience</p>
+        <h2>Hands-on technical and operations work.</h2>
+      </div>
+      <div class="experience-details-container">
+        <div id="job_experience">
+          <div id="job_name" aria-label="Experience tabs">
+            <button id="buttonOne" class="active" type="button"></button>
+            <button id="buttonTwo" type="button"></button>
+            <button id="buttonThree" type="button"></button>
+          </div>
+          <div id="content">
+            <div id="contentOne"></div>
+            <div id="contentTwo"></div>
+            <div id="contentThree"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="content-section">
+      <div class="section-heading centered">
+        <p class="eyebrow">Projects</p>
+        <h2>Selected work from my GitHub.</h2>
+      </div>
+      <div class="experience-details-container">
+        <div class="about-containers" id="project-container"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="content-section">
+      <div class="contact-card">
+        <p class="eyebrow">Contact</p>
+        <h2>Let us build something practical.</h2>
+        <p>
+          Reach out for student projects, business tools, app prototypes, or web systems.
+        </p>
+        <div class="contact-info-upper-container">
+          <a class="contact-info-container" href="mailto:davidsuballa@gmail.com">
+            <img src="./assets/email.png" alt="" class="icon contact-icon email-icon" />
+            <span>davidsuballa@gmail.com</span>
+          </a>
+          <a class="contact-info-container" href="https://www.linkedin.com/in/christian-dave-suballa-686286317/">
+            <img src="./assets/linkedin.png" alt="" class="icon contact-icon" />
+            <span>LinkedIn</span>
+          </a>
+          <a class="contact-info-container" href="https://github.com/davesuballa">
+            <img src="./assets/github.png" alt="" class="icon contact-icon" />
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright &#169; 2026 Christian Dave. All Rights Reserved.</p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 

@@ -84,56 +84,78 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       title: "Recycle App",
       imgSrc: "./assets/recycle-app-generated.png",
+      description: "Expo React Native recycling scanner with material detection, guides, history, and cloud storage.",
+      tags: ["Expo", "Firebase", "AI Detection"],
       githubUrl: "https://github.com/davesuballa/recycle",
     },
     {
       title: "Microservices V2",
       imgSrc: "./assets/microservices-v2-generated.png",
+      description: "ASP.NET Core Web API for merchant onboarding with SQL Server, Swagger, Basic Auth, and service integrations.",
+      tags: [".NET 6", "SQL Server", "API"],
       githubUrl: "https://github.com/davesuballa/MicroservicesV2",
     },
     {
       title: "Workout Application",
       imgSrc: "./assets/workoutapp.png",
+      description: "Android fitness app with login, meal plans, workout customization, reports, and Firebase data storage.",
+      tags: ["Android", "Firebase", "Mobile"],
       githubUrl: "https://github.com/davesuballa/WorkoutAPP",
     },
     {
       title: "Basic QRCODE Maker",
       imgSrc: "./assets/qrcode.png",
+      description: "Android QR code scanner and generator for creating, reading, and sharing QR-based data.",
+      tags: ["Android", "QR Code", "Utility"],
       githubUrl: "https://github.com/davesuballa/BasicQRCODESCANNER",
     },
     {
       title: "Chatbot",
       imgSrc: "./assets/chatbot.png",
+      description: "Simple chatbot project focused on conversational UI and API-driven responses.",
+      tags: ["Android", "Chatbot", "API"],
       githubUrl: "https://github.com/davesuballa/SimpleChatBot",
     },
     {
       title: "Dog Movement and Emotion Recognition",
       imgSrc: "./assets/Buddy.png",
+      description: "Mobile recognition app for detecting dog movement and emotion patterns.",
+      tags: ["Android", "Recognition", "Mobile"],
       githubUrl: "https://github.com/davesuballa/DogRecognitionAndroid",
     },
     {
       title: "Station Gaming",
       imgSrc: "./assets/stationgaming.png",
+      description: "Gaming station web project with a themed interface and interactive browsing experience.",
+      tags: ["Web", "HTML", "CSS"],
       githubUrl: "https://github.com/davesuballa/Station-Gaming",
     },
     {
       title: "Inventory system",
       imgSrc: "./assets/inventory.png",
+      description: "Inventory management webpage for tracking items and organizing product records.",
+      tags: ["Web", "CRUD", "Management"],
       githubUrl: "https://github.com/davesuballa/Inventory-Management-Webpage",
     },
     {
       title: "Shop system",
       imgSrc: "./assets/shop.png",
+      description: "Online shop webpage with product browsing, user actions, and storefront layout.",
+      tags: ["Web", "Ecommerce", "UI"],
       githubUrl: "https://github.com/davesuballa/Shop-Webpage",
     },
     {
       title: "Employee Management System",
       imgSrc: "./assets/employee.png",
+      description: "Employee management webpage for organizing staff data and records.",
+      tags: ["Web", "CRUD", "Admin"],
       githubUrl: "https://github.com/davesuballa/Employee-Webpage",
     },
     {
       title: "Learnopia Website",
       imgSrc: "./assets/learning.png",
+      description: "Learning website concept with educational content structure and responsive web design.",
+      tags: ["Web", "Education", "UI"],
       githubUrl: "https://github.com/davesuballa/Learnopia-Webpage",
     },
     
@@ -141,32 +163,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const projectContainer = document.getElementById("project-container");
 
-  function getProjectVisual(project) {
-    if (project.imgSrc) {
-      return `
-        <img src="${project.imgSrc}" alt="${project.title}" class="project-img" />
-      `;
-    }
-
-    return `
-      <div class="repo-preview" aria-label="${project.title} repository preview">
-        <div class="repo-preview__badge">GitHub Repository</div>
-        <h3>${project.repoName}</h3>
-        <p>${project.description}</p>
-      </div>
-    `;
-  }
-
   projects.forEach((project) => {
+    const tagsHTML = project.tags
+      .map((tag) => `<span class="project-tag">${tag}</span>`)
+      .join("");
+
     const projectHTML = `
       <div class="details-container color-container">
         <div class="article-container">
-          ${getProjectVisual(project)}
+          <img src="${project.imgSrc}" alt="${project.title}" class="project-img" />
         </div>
-        <h2 class="experience-sub-title project-title">${project.title}</h2>
-        <div class="btn-container">
+        <div class="project-content">
+          <h2 class="project-title">${project.title}</h2>
+          <p class="project-description">${project.description}</p>
+          <div class="project-tags">${tagsHTML}</div>
           <button class="btn btn-color-2 project-btn" onclick="location.href='${project.githubUrl}'">
-            Github
+            View on GitHub
           </button>
         </div>
       </div>
